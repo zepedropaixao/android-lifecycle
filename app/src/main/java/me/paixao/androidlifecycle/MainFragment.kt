@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 
 class MainFragment: Fragment() {
- 
+
     private fun printLog(s:String) {
         // display a message in Logcat
         Log.e("Fragment Lifecycle:", s)
