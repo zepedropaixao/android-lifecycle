@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Android Lifecycle</string>
+    <string name="check_logcat">Please check your logcat in Android Studio, lifecycle messages should be in red.</string>
 </resources>
