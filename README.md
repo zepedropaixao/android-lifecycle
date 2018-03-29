@@ -1,4 +1,4 @@
-# Android Lifecycle Tutorial - sample code [![Build Status](https://travis-ci.org/zepedropaixao/android-lifecycle.svg?branch=master)](https://travis-ci.org/zepedropaixao/android-lifecycle)
+# Android Lifecycle Tutorial - sample code 
 
 This repository was created for learning purposes. To follow my Android turorials please visit paixao.me
 

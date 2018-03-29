@@ -3,7 +3,7 @@ language: android
 env:
   global:
     - COMPILE_SDK_VERSION=27 # Same as `compileSdkVersion` in build.gradle
-    - EMULATOR_API=25
+    - EMULATOR_API=26
     - ABI=armeabi-v7a
     - TAG=google_apis
     - ADB_INSTALL_TIMEOUT=5 # minutes
@@ -23,11 +23,14 @@ notifications:
   email: false
 
 before_install:
-  - yes | sdkmanager "platforms;android-27"
+  - yes | sdkmanager "platforms;android-${COMPILE_SDK_VERSION}"
+
+install:
+  - travis_wait 30
 
 before_script:
   - echo no | android create avd --force -n test -t "android-${EMULATOR_API}" --abi ${ABI} --tag ${TAG}
-  - emulator -avd test -no-skin -no-audio -no-window &
+  - emulator -avd test -no-audio -no-window &
   - android-wait-for-emulator
   - adb shell input keyevent 82 &
 
